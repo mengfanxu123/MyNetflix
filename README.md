@@ -1,2 +1,0 @@
-# MyNetflix
-Created with CodeSandbox
