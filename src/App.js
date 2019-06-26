@@ -19,7 +19,11 @@ class App extends Component {
     // console.log(myList, recommendations);
     return (
       <div className="App">
-        <h1>Netflix</h1>
+        <img
+          className="logo"
+          src="https://store-images.s-microsoft.com/image/apps.51445.9007199266246365.c6dce6b1-5edd-4e64-a117-0e45b8165403.c7938026-2c39-48b0-b8f8-067273b77187"
+        />
+
         <h2>My List</h2>
         <div className="myList">
           {myList.map((element, index) => {

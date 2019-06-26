@@ -1,10 +1,10 @@
 body {
-  background-color: rgba(10, 7, 7, 0.445);
+  background-color: black;
+  color: white;
 }
 
 .App {
   font-family: sans-serif;
-  background: rgba(22, 20, 20, 0);
 }
 
 .myList {
@@ -53,4 +53,9 @@ button {
 
 .postShow:hover button {
   opacity: 1;
+}
+
+.logo {
+  width: 200px;
+  height: 100px;
 }
