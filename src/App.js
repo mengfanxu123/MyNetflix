@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import "./styles.css";
 import { connect } from "react-redux";
 import * as actions from "./Actions-creater";
-import ListElement from "../src/listElement.js";
-
+import Reusebutton from "../src/reusebutton.js";
 class App extends Component {
   componentDidMount() {
     this.props.list();
@@ -32,14 +31,13 @@ class App extends Component {
               <div className="movie">
                 <div className="postShow">
                   <div className="overlay" />
-                  <ListElement element={element} />
-                  <div>
-                    <button
-                      onClick={() => this.handleRemoveMovieFromMyList(index)}
-                    >
-                      Remove
-                    </button>
-                  </div>
+                  {/*this is reusedable component both from my list and recommedation */}
+                  <Reusebutton
+                    element={element}
+                    handle={this.handleRemoveMovieFromMyList}
+                    index={index}
+                    text="remove"
+                  />
                 </div>
               </div>
             );
@@ -52,12 +50,13 @@ class App extends Component {
               <div className="movie">
                 <div className="postShow">
                   <div className="overlay" />
-                  <ListElement element={element} />
-                  <div>
-                    <button onClick={() => this.handleAddMovietoMyList(index)}>
-                      Add
-                    </button>
-                  </div>
+                  {/*this is reusedable component both from my list and recommedation, when you click it, will happend */}
+                  <Reusebutton
+                    element={element}
+                    handle={this.handleAddMovietoMyList}
+                    index={index}
+                    text="add"
+                  />
                 </div>
               </div>
             );
